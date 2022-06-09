@@ -132,11 +132,20 @@
 //hoisting example
 //this prints undefined JavaScript to console because variable message gets hoisted but it 
 //can never read the value Hello since the message variable is declared and initialized at last
+// hello('JavaScript')
+// function hello(input) {
+//     console.log(`${message} ${input}`)
+// }
+// var message = 'Hello'
+
 hello('JavaScript')
-function hello(input) {
-    console.log(`${message} ${input}`)
+var hello = function (lang) {
+    console.log(`Hello ${lang}`)
 }
-var message = 'Hello'
+
+// function hello() {
+//     console.log('Hello')
+// }
 
 
 
