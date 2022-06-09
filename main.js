@@ -71,11 +71,63 @@
 // console.log('Human')
 
 //object destructuring/deep copy/shallow copy
-let myArray = [1, 2, 3, {user: 'suraj'}, {password: 'mishra'}]
-let {user} = myArray[3]
-let {password} = myArray[4]
-let newArray = [...myArray.slice(0, 3), {user}, {password}]
-newArray[3].user = 'Shova'
+// let myArray = [1, 2, 3, {user: 'suraj'}, {password: 'mishra'}]
+// let {user} = myArray[3]
+// let {password} = myArray[4]
+// let newArray = [...myArray.slice(0, 3), {user}, {password}]
+// newArray[3].user = 'Shova'
+// console.log(myArray)
+// console.log(newArray)
+
+//reference copy
+// let myObj = {
+//     user: 'suraj',
+//     age: 30
+// }
+// let referenceCopy = myObj
+// console.log('referenceCopy', referenceCopy)
+
+// //deep copy
+// let deepCopy = {
+//     name: myObj.user,
+//     age: myObj.age
+// }
+// deepCopy.user = 'Shova'
+// console.log('deepcopy', deepCopy)
+// console.log('myobj', myObj)
+
+// //object destructuring method for deep copy
+// let {user, age} = myObj
+// let destructuringObj = {user, age}
+// destructuringObj.user = 'alia'
+// destructuringObj.age = 22
+// console.log('destructuringObj', destructuringObj)
+
+// //array spreading method for deep copy
+// let array = [1, 2, 3, 4]
+// let newArray = [...array]
+// newArray[0] = 5
+// console.log('array', array)
+// console.log('newArray', newArray)
+
+//spreading method for deep copy of object array
+let myArray = [1, 2, 3, {game: 'voleyball'}, {score: 10}, 4, 5]
+let {game} = myArray[3]
+let {score} = myArray[4]
+
+let newMyArray = [...myArray.slice(0, 3), {game}, {score}, ...myArray.slice(5, 7)]
+newMyArray[0] = 'Suraj'
+
 console.log(myArray)
-console.log(newArray)
+console.log(newMyArray)
+
+//destructuring in array can be done with rest method as well inside a function parameter
+function myFunc(firstElement, ...rest) {
+    firstElement = 'Sujan'
+    console.log(firstElement)
+}
+
+myFunc(myArray)
+
+
 
