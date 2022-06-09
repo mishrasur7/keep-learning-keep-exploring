@@ -138,14 +138,21 @@
 // }
 // var message = 'Hello'
 
-hello('JavaScript')
-var hello = function (lang) {
-    console.log(`Hello ${lang}`)
-}
+// hello('JavaScript')
+// var hello = function (lang) {
+//     console.log(`Hello ${lang}`)
+// }
 
 // function hello() {
 //     console.log('Hello')
 // }
+
+function convertCurrency(rate, ...amounts) {
+    return amounts.map(amount => amount * rate) 
+}
+
+const amount = convertCurrency(1.54, 10, 20, 23, 1, 90)
+console.log('amounts:', amount)
 
 
 
