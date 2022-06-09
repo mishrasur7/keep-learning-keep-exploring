@@ -110,24 +110,34 @@
 // console.log('array', array)
 // console.log('newArray', newArray)
 
-//spreading method for deep copy of object array
-let myArray = [1, 2, 3, {game: 'voleyball'}, {score: 10}, 4, 5]
-let {game} = myArray[3]
-let {score} = myArray[4]
+// spreading method for deep copy of object array
+// let myArray = [1, 2, 3, {game: 'voleyball'}, {score: 10}, 4, 5]
+// let {game} = myArray[3]
+// let {score} = myArray[4]
 
-let newMyArray = [...myArray.slice(0, 3), {game}, {score}, ...myArray.slice(5, 7)]
-newMyArray[0] = 'Suraj'
+// let newMyArray = [...myArray.slice(0, 3), {game}, {score}, ...myArray.slice(5, 7)]
+// newMyArray[0] = 'Suraj'
 
-console.log(myArray)
-console.log(newMyArray)
+// console.log(myArray)
+// console.log(newMyArray)
 
-//destructuring in array can be done with rest method as well inside a function parameter
-function myFunc(firstElement, ...rest) {
-    firstElement = 'Sujan'
-    console.log(firstElement)
+// //destructuring in array can be done with rest method as well inside a function parameter
+// function myFunc(firstElement, ...rest) {
+//     firstElement = 'Sujan'
+//     console.log(firstElement)
+// }
+
+// myFunc(myArray)
+
+//hoisting example
+//this prints undefined JavaScript to console because variable message gets hoisted but it 
+//can never read the value Hello since the message variable is declared and initialized at last
+hello('JavaScript')
+function hello(input) {
+    console.log(`${message} ${input}`)
 }
+var message = 'Hello'
 
-myFunc(myArray)
 
 
 
