@@ -56,16 +56,26 @@
 // console.log(999)
 // console.log(dogYears)
 
-let age = 100
-const checkYear = function () {
-    if(age > 12) {
-        var dogYears = age * 7
-        console.log(dogYears)
-        console.log('suraj')
-    }
-}
+// let age = 100
+// const checkYear = (() => {
+//     if(age > 12) {
+//         var dogYears = age * 7
+//         console.log(dogYears)
+//         console.log('Suraj')
+//         return 5
+//     }
+// })()
 
-console.log(888)
+// console.log('Mishra')
+// console.log(checkYear)
+// console.log('Human')
 
-console.log(checkYear())
+//object destructuring/deep copy/shallow copy
+let myArray = [1, 2, 3, {user: 'suraj'}, {password: 'mishra'}]
+let {user} = myArray[3]
+let {password} = myArray[4]
+let newArray = [...myArray.slice(0, 3), {user}, {password}]
+newArray[3].user = 'Shova'
+console.log(myArray)
+console.log(newArray)
 
