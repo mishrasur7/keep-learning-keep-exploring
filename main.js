@@ -147,19 +147,31 @@
 //     console.log('Hello')
 // }
 
-function convertCurrency(rate, ...amounts) {
-    return amounts.map(amount => amount * rate) 
+// function convertCurrency(rate, ...amounts) {
+//     return amounts.map(amount => amount * rate) 
+// }
+
+// const amount = convertCurrency(1.54, 10, 20, 23, 1, 90)
+// console.log('amounts:', amount)
+
+// function meterToCentimeter(converter, addition, ...meters) {
+//     return meters.map(centimeter => centimeter * converter + addition)
+// }
+
+// const meter = meterToCentimeter(100, 2, 3, 4, 5, 6) 
+// console.log('meters:', meter)
+
+//binding object to a function
+function bindMe () {
+    console.log('Hello ', this.username); 
+}
+let obj = {
+    username: 'suraj'
 }
 
-const amount = convertCurrency(1.54, 10, 20, 23, 1, 90)
-console.log('amounts:', amount)
+bindMe.call(obj)
+bindMe.apply(obj)
 
-function meterToCentimeter(converter, addition, ...meters) {
-    return meters.map(centimeter => centimeter * converter + addition)
-}
-
-const meter = meterToCentimeter(100, 2, 3, 4, 5, 6) 
-console.log('meters:', meter)
 
 
 
