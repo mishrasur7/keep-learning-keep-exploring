@@ -154,6 +154,14 @@ function convertCurrency(rate, ...amounts) {
 const amount = convertCurrency(1.54, 10, 20, 23, 1, 90)
 console.log('amounts:', amount)
 
+function meterToCentimeter(converter, addition, ...meters) {
+    return meters.map(centimeter => centimeter * converter + addition)
+}
+
+const meter = meterToCentimeter(100, 2, 3, 4, 5, 6) 
+console.log('meters:', meter)
+
+
 
 
 
