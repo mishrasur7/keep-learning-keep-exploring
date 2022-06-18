@@ -162,8 +162,8 @@
 // console.log('meters:', meter)
 
 //binding object to a function
-function bindMe () {
-    console.log('Hello ', this.username); 
+function bindMe() {
+    console.log('Hello ', this.username);
 }
 let obj = {
     username: 'suraj'
@@ -171,9 +171,3 @@ let obj = {
 
 bindMe.call(obj)
 bindMe.apply(obj)
-
-
-
-
-
-
